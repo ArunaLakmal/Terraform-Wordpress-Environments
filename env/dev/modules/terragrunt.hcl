@@ -2,6 +2,11 @@ terraform {
     source = "git::git@github.com:ArunaLakmal/Terraform-Wordpress-Stage-Modules.git//modules"
 }
 
+include {
+  path = find_in_parent_folders()
+}
+
+
 inputs = {
     aws_profile = "superhero"
 aws_region  = "us-east-1"
